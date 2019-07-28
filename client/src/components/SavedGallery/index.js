@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Delete from "../Delete";
 import API from "../../utils/API";
+import "./style.css"
 
 class SavedGallery extends Component {
     state = {
@@ -32,7 +33,7 @@ class SavedGallery extends Component {
                     {
                         this.state.items.map((item, index) => {
                             let { authors, title, image, link, description, _id } = item;
-                            let bookTitle = item.title;
+                            // let bookTitle = item.title;
                             return (
                                 <div key={index} className="col-sm-12 col-md-4 col-lg-12 book-column">
                                     <div className="book-wrapper">
@@ -42,7 +43,7 @@ class SavedGallery extends Component {
                                         />}
                                         <a className="book" href={link} target="blank">
                                             <div className="book-title white-text">
-                                                <h3>{bookTitle}</h3>
+                                                <h3>{title}</h3>
                                             </div>
                                         </a>
                                         <p><strong>Author: </strong>{authors}</p>
@@ -51,7 +52,7 @@ class SavedGallery extends Component {
                                             <a className="book" href={link} target="_blank">
                                                 <div className="book-image-wrapper">
                                                     <img src={image[0] !== undefined ? image[0].thumbnail : altImage}
-                                                        alt="Book Image"
+                                                        alt=""
                                                         className="book-image"
                                                     />
                                                 </div>

@@ -20,8 +20,8 @@ class Search extends Component {
             .then(response => response.json())
             .then(json => {
                 let { items } = json;
-                this.setState({ items });
-                this.setState({ lastQuery: this.state.query });
+                this.setState({items});
+                this.setState({lastQuery: this.state.query });
                 console.log(json);
             });
     }
@@ -34,7 +34,7 @@ class Search extends Component {
                     <InputGroup>
                         <FormControl
                             type="text"
-                            placeholder="Search for your books here"
+                            placeholder="Search for your books here and click enter!"
                             onChange={event => this.setState({ query: event.target.value })}
                             onKeyPress={event => {
                                 if (event.key == "Enter") {
@@ -42,6 +42,9 @@ class Search extends Component {
                                 }
                             }}
                         />
+                        {/* <InputGroup.Addon onClick={() => this.search()}>
+                            <Glyphicon glyph="search"></Glyphicon>
+                        </InputGroup.Addon> */}
                     </InputGroup>
                 </FormGroup>
                 <Gallery items={this.state.items}

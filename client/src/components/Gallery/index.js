@@ -6,7 +6,7 @@ class Gallery extends Component {
     saveBooks(props) {
         API.saveBook({
             title: props.title,
-            author: props.author,
+            authors: props.authors,
             description: props.description,
             image: props.image,
             link: props.link,
@@ -29,7 +29,7 @@ class Gallery extends Component {
                 {
                     this.props.items.map((item, index) => {
                         let { title, imageLinks, infoLink, description, authors } = item.VolumeInfo;
-                        let bookTitle = item.volumeInfo.title;
+                        // let bookTitle = item.volumeInfo.title;
 
                         return (
                             <div key={index} className="col-sm-12 col-md-4 col-log-12 book-column">
@@ -44,7 +44,7 @@ class Gallery extends Component {
                                     />
                                     <a className="book" href={infoLink} target="_blank">
                                         <div className="book-title white-text">
-                                            <h3>{bookTitle}</h3>
+                                            <h3>{title}</h3>
                                         </div>
                                     </a>
 
@@ -53,7 +53,7 @@ class Gallery extends Component {
                                         <a className="book" href={infoLink} target="_blank">
                                             <div className="book-image-wrapper">
                                                 <img src={imageLinks !== undefined ? imageLinks.thumbnail : altImage}
-                                                    alt="Book Image"
+                                                    alt=""
                                                     className="book-image"
                                                 />
                                             </div>
