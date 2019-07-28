@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Search from "./pages/Search";
 
 import NavTabs from "./components/NavTabs";
 
