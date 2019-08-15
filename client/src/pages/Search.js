@@ -1,16 +1,3 @@
-// import React, { Component } from "react";
-// import Search from "../components/Search";
-
-// class SearchPage extends Component {
-//     render(){
-//         return(
-//             <Search />
-//         )
-//     }
-// }
-
-// export default SearchPage;
-
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
@@ -21,7 +8,7 @@ import { BookListItem, BookList } from "../components/BookList";
 
 
 class Search extends Component {
-  state = {// The state will be the array of books and the user input
+  state = {
     books: [],
     bookInput: ""
   };

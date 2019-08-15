@@ -1,23 +1,5 @@
 import axios from "axios";
 
-// export default {
-//     getBooks: function(){
-//         return axios.get("/api/books");
-//     },
-
-//     getBook: function(id){
-//         return axios.get("/api/books/" + id);
-//     },
-
-//     deleteBook: function(id){
-//         return axios.delete("/api/books/" + id);
-//     },
-
-//     saveBook: function(bookData){
-//         return axios.post("/api/books", bookData);
-//     }
-// };
-
 export default {
     // return the book from the googleapi
     searchBooks: function(query) {
@@ -38,6 +20,7 @@ export default {
     // Saves a book to the database
     saveBook: function(bookData) {
       return axios.post("/api/books", bookData);
+      console.log(bookData);
     },
     
     // Gets all the saved books

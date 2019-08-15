@@ -1,14 +1,3 @@
-// import React, { Component } from 'react';
-// import SavedGlobal from "../components/SavedGlobal";
-
-// class Saved extends Component {
-//     render() {
-//         return (<SavedGlobal />)
-//     }
-// }
-
-// export default Saved;
-
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
@@ -21,16 +10,14 @@ class Saved extends Component {
     books: []
   };
 
-  // When this component mounts, the getSavedBooks route is called
-  // it will load all the books saved in the database
+
   componentDidMount() {
     API.getSavedBooks()
       .then(res => this.setState({ books: res.data }))
       .catch(err => console.log(err));
   };
 
-  // when the user click on the delete button, teh deleteBook route is called with the id of the choosen book
-  // that bool will be deleted from the database
+
   handleDeleteBook = id => {
     API.deleteBook(id)
       .then(res => this.componentDidMount())

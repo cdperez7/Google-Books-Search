@@ -5,7 +5,7 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://<heroku_vt7w0b0q>:<Domino6282!>@ds163757.mlab.com:63757/heroku_vt7w0b0q"
+  "mongodb://localhost/google"
 );
 
 
