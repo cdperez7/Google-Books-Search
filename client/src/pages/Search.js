@@ -85,7 +85,9 @@ class Search extends Component {
                   image={book.volumeInfo.imageLinks.thumbnail}
                   Button={() => (
                     <button onClick={() => this.handleSavedButton(book.id)}>Save</button>
+                    
                   )}
+                  
                 />
               );
             })}

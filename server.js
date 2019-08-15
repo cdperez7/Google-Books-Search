@@ -15,13 +15,10 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://<heroku_vt7w0b0q>:<Domino6282!>@ds163757.mlab.com:63757/heroku_vt7w0b0q");
+
 
 // mongoose.connect('mongodb://localhost/googlebooks', {useNewUrlParser: true});
-
-
-// Send every request to the React app
-// Define any API routes before this runs
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
